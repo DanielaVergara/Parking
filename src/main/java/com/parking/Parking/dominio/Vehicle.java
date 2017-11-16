@@ -3,14 +3,12 @@ package com.parking.Parking.dominio;
 
 public class Vehicle {
 
-	protected String cylinder;
+
 	protected String typeVehicle;
 	protected String licensePlate;
 	protected String hour;
 	
-	public String getCylinder() {
-		return cylinder;
-	}
+
 	public String getType() {
 		return typeVehicle;
 	}
@@ -19,9 +17,6 @@ public class Vehicle {
 	}
 	public String getHour() {
 		return hour;
-	}
-	public void setCylinder(String cylinder) {
-		this.cylinder = cylinder;
 	}
 	
 	public void getType(String type) {
@@ -38,9 +33,8 @@ public class Vehicle {
 		
 	}
 
-	public Vehicle(String cylinder, String typeVehicle, String plate, String hour){
+	public Vehicle( String typeVehicle, String plate, String hour){
 		
-		this.cylinder   = cylinder;
 		this.typeVehicle= typeVehicle;
 		this.licensePlate= plate;
 		this.hour		= hour;

@@ -8,8 +8,8 @@ public class Moto extends Vehicle  {
 		super();
 	}
 	
-	public Moto(String cylinder,String typeVehicle, String plate, String hour){
+	public Moto(String typeVehicle, String plate, String hour){
 		
-		super(cylinder,typeVehicle,plate,hour);
+		super(typeVehicle,plate,hour);
 	}
 }
