@@ -1,12 +1,19 @@
 package com.parking.Parking.controller;
 
+import java.sql.Date;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.parking.Parking.dominio.Car;
+import com.parking.Parking.dominio.Moto;
 import com.parking.Parking.dominio.Vehicle;
 import com.parking.Parking.repository.VehicleRepository;
 
@@ -17,32 +24,26 @@ public class VehicleController {
 	@Autowired
 	VehicleRepository vehicleRepository;
 
-	//create
-	@RequestMapping(method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
-	public Vehicle create(@RequestBody Vehicle vehicle){
-		return vehicleRepository.save(vehicle);
+	@PostMapping
+	public void createCar(@RequestBody Vehicle veh, @RequestBody Moto moto){
+		Date fechaActual = new Date(0);
+		SimpleDateFormat formateador = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+		veh.setHour(formateador.format(fechaActual));
+		 vehicleRepository.save(veh);
+		 vehicleRepository.save(moto);
+	}
+
+	
+	
+	@PutMapping
+	public void update(@RequestBody Vehicle vehicle){
+		vehicleRepository.save(vehicle);
 	}
 	
-	
-	//read
-	/*@RequestMapping(value = "/{licensePlate}")
-	public Vehicle read(@PathVariable String licensePlate){
-		return vehicleRepository.findOne(licensePlate);
-			
-	}*/
-	
-	//update
-/*	@RequestMapping(method = RequestMethod.PUT, consumes = MediaType.APPLICATION_JSON_VALUE)
-	public void update(Vehicle vehicle){
-		vehicleRepository.save(vehicle);
-	}*/
-	
-	
-	//delete
-/*	@RequestMapping(value = "/{licensePlate}", method = RequestMethod.DELETE)
+	@DeleteMapping
 	public void delete(String licensePlate){
 		vehicleRepository.delete(licensePlate);
-	}*/
+	}
 	
 	
 	

@@ -1,12 +1,12 @@
 package com.parking.Parking.dominio;
 
 
-public class Vehicle {
+public class Vehicle extends Parqueadero{
 
 
 	protected String typeVehicle;
 	protected String licensePlate;
-	protected String hour;
+
 	
 
 	public String getType() {
@@ -15,31 +15,32 @@ public class Vehicle {
 	public String getPlate() {
 		return licensePlate;
 	}
-	public String getHour() {
-		return hour;
-	}
-	
-	public void getType(String type) {
+
+	public void setType(String type) {
 		this.typeVehicle = type;
 	}
 	public void setPlate(String plate) {
 		this.licensePlate = plate;
 	}
-	public void setHour(String hour) {
-		this.hour = hour;
-	}
+
 	
 	public Vehicle(){
+		super();
+	}
+
+	public Vehicle(String hour, String money, String typeVehicle, String plate){
+		super(hour,money);
+		this.typeVehicle= typeVehicle;
+		this.licensePlate= plate;
 		
 	}
 
-	public Vehicle( String typeVehicle, String plate, String hour){
+	
+/*	public Moto(String cylinder,String typeVehicle, String plate, String hour){
 		
-		this.typeVehicle= typeVehicle;
-		this.licensePlate= plate;
-		this.hour		= hour;
-		
-	}
+		super(typeVehicle,plate,hour);
+		this.cylinder = cylinder;
+	}*/
 
 }
 
