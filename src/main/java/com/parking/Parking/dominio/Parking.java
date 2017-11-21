@@ -1,9 +1,10 @@
 package com.parking.Parking.dominio;
 
-public class Parqueadero {
+
+public class Parking {
 
 	protected String hour;
-	protected static String money;
+	protected  String money;
 	
 	
 	public String getHour() {
@@ -16,17 +17,17 @@ public class Parqueadero {
 		this.hour = hour;
 	}
 	public void setMoney(String money) {
-		Parqueadero.money = money;
+		this.money = money;
 	}
 	
-	public Parqueadero(){
+	public Parking(){
 		
 	}
 	
-	public Parqueadero(String hour, String money){
+	public Parking(String hour, String money){
 		
 		this.hour = hour;
-		Parqueadero.money= money;
+		this.money= money;
 		
 	}
 	

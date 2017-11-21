@@ -1,6 +1,6 @@
 package com.parking.Parking.dominio;
 
-public class Moto extends Vehicle  {
+public class Motorcycle extends Vehicle  {
 	
 	private String cylinder;
 	
@@ -13,11 +13,11 @@ public class Moto extends Vehicle  {
 	}
 
 	
-	public Moto() {
+	public Motorcycle() {
 		super();
 	}
 	
-	public Moto(String cylinder,String typeVehicle, String plate, String hour){
+	public Motorcycle(String cylinder,String typeVehicle, String plate, String hour, String money){
 		super(typeVehicle,plate,hour,money);
 		this.cylinder = cylinder;
 	}

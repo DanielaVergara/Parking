@@ -1,7 +1,7 @@
 package com.parking.Parking.dominio;
 
 
-public class Vehicle extends Parqueadero{
+public class Vehicle extends Parking{
 
 
 	protected String typeVehicle;

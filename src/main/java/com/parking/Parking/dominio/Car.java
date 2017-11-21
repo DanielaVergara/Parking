@@ -8,7 +8,7 @@ public class Car extends Vehicle {
 	}
 	
 	
-	public Car(String typeVehicle, String plate, String hour){
+	public Car(String typeVehicle, String plate, String hour,String money){
 		
 		super(typeVehicle,plate, money, hour);
 	}
