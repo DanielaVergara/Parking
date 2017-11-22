@@ -1,7 +1,11 @@
 package com.parking.Parking.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,11 +27,10 @@ public class carController {
 	public String  createCar(@RequestBody Car car){
 		return carService.validateCar(car);
 	}
-	
-	
+
 	@GetMapping("/search")
-	public void findCar(Car car){
-		carService.validateVehicle(car);
+	public List<Vehicle> searchCar(){
+		return carService.allCar();
 	}
 	
 	@GetMapping("/getType")
@@ -35,5 +38,9 @@ public class carController {
 		return carService.getType(car).size();
 	}
 	
+	@DeleteMapping("/delete/{licensePlate}")
+	public List<Vehicle> deleteBylicensePlate(@PathVariable String licensePlate){
+		return carService.deleteBylicensePlate(licensePlate);
+	}
 	
 }

@@ -1,8 +1,11 @@
 package com.parking.Parking.dominio;
 
+import org.springframework.data.annotation.Id;
+
 public class Car extends Vehicle {
 	
-
+	@Id
+	private String id;
 	public Car(){
 		super();
 	}

@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.parking.Parking.dominio.Motorcycle;
-import com.parking.Parking.dominio.Vehicle;
 import com.parking.Parking.services.motorCycleService;
 
 

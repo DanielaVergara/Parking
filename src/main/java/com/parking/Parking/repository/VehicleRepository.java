@@ -13,4 +13,6 @@ public interface VehicleRepository extends  MongoRepository<Vehicle, String>{
 	public Vehicle findOne(String licensePlate);
 	
 	public List<Vehicle> findBytypeVehicle(String type);
+	
+	public List<Vehicle> deleteBylicensePlate(String plate);
 }

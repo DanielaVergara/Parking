@@ -63,18 +63,19 @@ public class motorCycleService {
 				return NotAllowed;
 			}
 		}
+
 	
 	public String validateVehicle(Motorcycle moto){
 		
 		if(moto.getType().equals(Motorcycle)){
-			return validateCantMotorCycle(moto);
+			return validateQuantityMotorCycle(moto);
 		}else{
 			return NotMotorcycle;
 		}
 		
 	  }
 	
-	public String validateCantMotorCycle(Motorcycle moto){
+	public String validateQuantityMotorCycle(Motorcycle moto){
 		List<Vehicle> listV=vehRepository.findBytypeVehicle(moto.getType());
 		if(listV.size() < 10){
 			return createMoto(moto);
@@ -91,7 +92,6 @@ public class motorCycleService {
 			return EnteredMotorcycle;
 
 	}
-	
 	
 	public List<Vehicle> getType(Motorcycle moto){
 		return vehRepository.findBytypeVehicle(moto.getType());

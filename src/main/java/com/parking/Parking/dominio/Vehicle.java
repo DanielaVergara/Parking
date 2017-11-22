@@ -35,12 +35,6 @@ public class Vehicle extends Parking{
 		
 	}
 
-	
-/*	public Moto(String cylinder,String typeVehicle, String plate, String hour){
-		
-		super(typeVehicle,plate,hour);
-		this.cylinder = cylinder;
-	}*/
 
 }
 

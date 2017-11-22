@@ -1,8 +1,6 @@
 package com.parking.Parking.testdataBuilder;
 
-import com.parking.Parking.dominio.Parking;
 import com.parking.Parking.dominio.Vehicle;
-import com.parking.Parking.testdataBuilder.*;
 
 public class VehicleTestDataBuilder {
 	
