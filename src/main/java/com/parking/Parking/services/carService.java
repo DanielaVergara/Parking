@@ -21,11 +21,11 @@ public class carService {
 	VehicleRepository vehRepository;
 
 	
-	private final static String Car 	        =  "carro";
-	private final static String DateNotobtained =  "It is not a day avalible for entered, by type license";
-	private final static String NotCar 			=  "It is not a car";
-	private final static String	EnteredCar		=  "The car has just entered";
-	private final static String SpaceExceeded	=  "Space exceeded, no more cars can be entered";
+	private final  String Car 	        =  "carro";
+	private final  String DateNotobtained =  "It is not a day avalible for entered, by type license";
+	private final  String NotCar 			=  "It is not a car";
+	private final  String	EnteredCar		=  "The car has just entered";
+	private final  String SpaceExceeded	=  "Space exceeded, no more cars can be entered";
 	
 	public String getDayWeek(){
 	String[] strDays = new String[]{

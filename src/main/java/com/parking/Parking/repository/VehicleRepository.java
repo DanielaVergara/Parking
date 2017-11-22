@@ -4,8 +4,6 @@ import java.util.List;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 
-import com.parking.Parking.dominio.Car;
-import com.parking.Parking.dominio.Motorcycle;
 import com.parking.Parking.dominio.Vehicle;
 
 public interface VehicleRepository extends  MongoRepository<Vehicle, String>{

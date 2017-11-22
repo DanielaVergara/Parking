@@ -19,12 +19,12 @@ public class motorCycleService {
 	@Autowired
 	VehicleRepository vehRepository;
 	
-	private final static String Motorcycle 		= "moto";
-	private final static String NotAllowed      =  "You can't enter today";
-	private final static String DateNotobtained =  "Date not obtained";
-	private final static String	EnteredMotorcycle =  "The motorcycle has just entered";
-	private final static String SpaceExceeded	=  "Space exceeded, no more motorcycles can be entered";
-	private final static String NotMotorcycle 	= "It is not motorcycle";
+	private final  String Motorcycle 		= "moto";
+	private final  String NotAllowed      =  "You can't enter today";
+	private final  String DateNotobtained =  "Date not obtained";
+	private final  String	EnteredMotorcycle =  "The motorcycle has just entered";
+	private final  String SpaceExceeded	=  "Space exceeded, no more motorcycles can be entered";
+	private final  String NotMotorcycle 	= "It is not motorcycle";
 	
 	public String getDayWeek(){
 	String[] strDays = new String[]{
