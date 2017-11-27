@@ -1,14 +1,18 @@
 package com.parking.Parking.dominio;
 
+
+
 public class Motorcycle extends Vehicle  {
 	
-	private String cylinder;
 	
-	public String getCylinder() {
+
+	private int cylinder;
+	
+	public int getCylinder() {
 		return cylinder;
 	}
 	
-	public void setCylinder(String cylinder) {
+	public void setCylinder(int cylinder) {
 		this.cylinder = cylinder;
 	}
 
@@ -17,8 +21,8 @@ public class Motorcycle extends Vehicle  {
 		super();
 	}
 	
-	public Motorcycle(String cylinder,String typeVehicle, String plate, String hour, String money){
-		super(typeVehicle,plate,hour,money);
+	public Motorcycle(int cylinder,String typeVehicle, String licensePlate, String hour, String money, boolean outVehicle){
+		super(typeVehicle,licensePlate,hour,money,outVehicle);
 		this.cylinder = cylinder;
 	}
 }

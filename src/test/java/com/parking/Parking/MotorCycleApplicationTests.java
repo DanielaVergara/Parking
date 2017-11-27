@@ -6,30 +6,22 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.parking.Parking.controller.carController;
-import com.parking.Parking.dominio.Car;
+import com.parking.Parking.controller.motorcycleController;
+import com.parking.Parking.dominio.Motorcycle;
+
 import static org.mockito.Mockito.when;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class ParkingApplicationTests {
+public class MotorCycleApplicationTests {
 
 	@MockBean
-	carController vh;
+	motorcycleController motorCy;
 	
 	@Test
 	public void createCar() {
-		Car car=new Car();
-		when(vh.createCar(car))
+		Motorcycle moto = new Motorcycle();
+		when(motorCy.createMoto(moto))
         .thenReturn("success");
 	}
-	
-	@Test
-	public void validateCar(){
-		Car car=new Car();
-		when(vh.createCar(car))
-        .thenReturn("Monday");
-	}
-	
-
 }
